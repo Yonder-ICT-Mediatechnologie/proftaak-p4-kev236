@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pussieblaster!</title>
+    <!-- p5.js en p5.sound.js via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/addons/p5.sound.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+            /* Font wordt via p5.js geladen en ingesteld, niet via CSS */
+            color: #fff; /* Standaardtekstkleur voor fallback */
+            /* Zorg dat de canvas element geen extra ruimte heeft onderaan */
+        }
+        canvas {
+            border: 2px solid #fff; /* Wit kader om de game */
+            display: block; /* Om extra ruimte onder canvas te voorkomen */
+            /* Belangrijk voor het behouden van scherpe pixels bij schalen */
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+    </style>
+</head>
+<body>
+    <!-- Laad je game scripts in de juiste volgorde -->
+    <script src="js/Constants.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/Player.js"></script>
+    <script src="js/Enemy.js"></script>
+    <script src="js/EnemyScout.js"></script>
+    <script src="js/EnemyCruiser.js"></script>
+    <script src="js/Projectile.js"></script>
+    <script src="js/PowerUp.js"></script>
+    <script src="js/UI.js"></script>
+    <script src="js/CollisionManager.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>
